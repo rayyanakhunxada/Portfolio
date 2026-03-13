@@ -36,14 +36,14 @@ export const PORTFOLIO_DATA = {
       description: "A WeatherSPhere homepage interface built entirely with React and CSS Modules using API.",
       image: "weather.png",
       tech: ["React", "Context API", "CSS Modules"],
-      link: "https://basic-weather-sphere.netlify.app/"
+      link: "https://weather-forecast-cyv3.vercel.app/"
     },
     {
       title: "Luxe Fashion Store",
       description: "A Luxe Premium Fashion Store homepage interface built entirely with React and CSS Modules using API.",
       image: "luxe.avif",
       tech: ["React", "Context API", "CSS Modules"],
-      link: "https://premium-fashion.netlify.app/"
+      link: "https://e-commerce-website-o5x1.vercel.app/"
     }
     // Add more projects by copying the block above!
   ],
