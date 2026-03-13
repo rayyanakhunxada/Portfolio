@@ -8,10 +8,8 @@ export const PORTFOLIO_DATA = {
     role: "Frontend Web Developer",
     bio: "I build exceptional and accessible digital experiences for the web. Passionate about React, modern UI, and writing clean, scalable code.",
     location: "Charsadda, Pakistan",
-    
-    email: "riyanakhonzada22@gmail.com", 
-    
-    avatar: "public/profile.jpeg" 
+    email: "riyanakhonzada22@gmail.com",
+    avatar: "/profile.jpeg" 
   },
 
   social: {
