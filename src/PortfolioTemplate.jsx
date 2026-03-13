@@ -1,82 +1,66 @@
 import React from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code, Briefcase, ChevronDown } from 'lucide-react';
 
-/* =========================================================================
-   👋 WELCOME TO YOUR NEW PORTFOLIO TEMPLATE! 👋
-   =========================================================================
-   This file is designed to be super easy for you to update.
-   All of your personal information, links, skills, and projects live right
-   here in this `PORTFOLIO_DATA` object. 
-
-   Just change the text here, and the website will automatically update!
-*/
-
 export const PORTFOLIO_DATA = {
-  // 👤 Basic Information
+  
   personal: {
     name: "Muhammad Rayyan",
     role: "Frontend Web Developer",
     bio: "I build exceptional and accessible digital experiences for the web. Passionate about React, modern UI, and writing clean, scalable code.",
-    location: "San Francisco, CA",
+    location: "Charsadda, Pakistan",
     
-    // 📧 Update your email address below so the contact buttons work!
     email: "riyanakhonzada22@gmail.com", 
     
-    // 📸 This looks for a file named `profile.jpg` in your `public` folder
-    avatar: "/profile.jpg" 
+    avatar: "public/profile.jpeg" 
   },
 
-  // 🔗 Social Media Links
   social: {
     github: "https://github.com/rayyanakhunxada",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com" // Add your URL or leave it if you don't use it
   },
 
-  // 🛠️ Your Tech Stack / Skills
   skills: [
-    "React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", 
+    "React", "JavaScript", "HTML5", "CSS", "Tailwind CSS", 
     "Git", "GitHub", "Responsive Design", "UI/UX"
   ],
 
-  // 💻 The Projects You Want To Show Off
   projects: [
     {
-      title: "KFC Homepage Clone",
-      description: "A fully responsive, pixel-perfect clone of the modern KFC homepage interface built entirely with React and Tailwind CSS.",
-      image: "https://images.unsplash.com/photo-1513185158878-8d8c1827003f?auto=format&fit=crop&w=800&q=80",
-      tech: ["React", "Tailwind", "Lucide Icons"],
-      link: "#" // <--- Paste your live project link or GitHub repo link here!
+      title: "MoviesVersee",
+      description: "A fully responsive, MoviesVerse homepage interface built entirely with React and Tailwind CSS using API.",
+      image: "hero.png",
+      tech: ["React", "TailwindCSS", "API", "Lucide Icons"],
+      link: "https://moviesversee.netlify.app/"
     },
     {
-      title: "E-Commerce Platform",
-      description: "A digital storefront prototype featuring dynamic product listing, shopping cart functionality, and fluid animations.",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80",
+      title: "WeatherSPhere",
+      description: "A WeatherSPhere homepage interface built entirely with React and CSS Modules using API.",
+      image: "weather.png",
       tech: ["React", "Context API", "CSS Modules"],
-      link: "#"
+      link: "https://basic-weather-sphere.netlify.app/"
     },
+    {
+      title: "Luxe Fashion Store",
+      description: "A Luxe Premium Fashion Store homepage interface built entirely with React and CSS Modules using API.",
+      image: "luxe.avif",
+      tech: ["React", "Context API", "CSS Modules"],
+      link: "https://premium-fashion.netlify.app/"
+    }
     // Add more projects by copying the block above!
   ],
 
-  // 🏢 Your Work History & Experience
   experience: [
     {
       role: "Frontend Web Developer",
       company: "Freelance",
-      period: "2023 - Present",
+      period: "2025 - Present",
       description: "Designing and building modern web applications. Focusing on intuitive user interfaces and performant React architectures."
     }
   ]
 };
 
-/* =========================================================================
-   🎨 WEBSITE LAYOUT COMPONENTS 🎨
-   =========================================================================
-   Below here is the code that actually draws your website on the screen.
-   I have broken it down into tiny, easy-to-read "Components" (like Lego blocks).
-*/
-
-// 👉 1. The Animated Background Blobs 
+// The Animated Background Blobs 
 const BackgroundEffects = () => (
   <div className="fixed inset-0 z-0 pointer-events-none">
     <div className="absolute top-10 -left-10 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse"></div>
@@ -85,7 +69,7 @@ const BackgroundEffects = () => (
   </div>
 );
 
-// 👉 2. The Top Section (Hero Banner) with your Name and Photo
+// The Top Section (Hero Banner) with your Name and Photo
 const HeroSection = ({ personal, social }) => {
   // This constructs a special link that tells the browser to open Gmail
   const gmailComposeLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${personal.email}`;
@@ -133,7 +117,7 @@ const HeroSection = ({ personal, social }) => {
       
       {/* Profile Image side */}
       <div className="relative group z-10 mt-10 md:mt-0">
-        <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
+        <div className="absolute -inset-2 bg-linear-to-r from-cyan-500 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl">
           <img src={personal.avatar} alt={personal.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
         </div>
@@ -147,7 +131,7 @@ const HeroSection = ({ personal, social }) => {
   );
 };
 
-// 👉 3. The Experience List and the Skills Grid
+//  The Experience List and the Skills Grid
 const ExperienceAndSkills = ({ experience, skills }) => (
   <section className="grid lg:grid-cols-5 gap-16 items-start">
     
@@ -197,7 +181,7 @@ const ExperienceAndSkills = ({ experience, skills }) => (
   </section>
 );
 
-// 👉 4. The Grid of Your Best Projects
+// The Grid of Your Best Projects
 const ProjectsGallery = ({ projects }) => (
   <section className="space-y-10">
     <div className="flex items-center gap-3">
@@ -216,7 +200,7 @@ const ProjectsGallery = ({ projects }) => (
           <div className="h-56 overflow-hidden relative">
             <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
             <img src={project.image} alt={project.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out" />
-            <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-slate-900 to-transparent z-10"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-linear-to-t from-slate-900 to-transparent z-10"></div>
           </div>
           
           {/* Project Details */}
@@ -244,7 +228,7 @@ const ProjectsGallery = ({ projects }) => (
   </section>
 );
 
-// 👉 5. The Footer / Bottom Contact Area
+// The Footer / Bottom Contact Area
 const Footer = ({ email }) => (
   <footer className="text-center pt-20 pb-10 border-t border-slate-800/50 space-y-6">
     <h2 className="text-white text-2xl font-bold">What's Next?</h2>
@@ -267,12 +251,6 @@ const Footer = ({ email }) => (
   </footer>
 );
 
-
-/* =========================================================================
-   🚀 THE MAIN APP ASSEMBLY 🚀
-   =========================================================================
-   This piece combines all the Legos above into ONE final page!
-*/
 export default function PortfolioTemplate() {
   // Grab all our data from the top object
   const { personal, social, skills, projects, experience } = PORTFOLIO_DATA;
