@@ -29,7 +29,7 @@ export const PORTFOLIO_DATA = {
       description: "A fully responsive, MoviesVerse homepage interface built entirely with React and Tailwind CSS using API.",
       image: "hero.png",
       tech: ["React", "TailwindCSS", "API", "Lucide Icons"],
-      link: "https://moviesversee.netlify.app/"
+      link: "https://movie-verse-zeta-silk.vercel.app/"
     },
     {
       title: "WeatherSPhere",
